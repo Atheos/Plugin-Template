@@ -1,21 +1,20 @@
-[{
-    "author": "Your Name",
-    "version": "Your Version",
-    "name": "Your Plugin Name",
-    "url": "https://github.com/Codiad/Codiad-Plugin-Template",
-    "rightbar": [
-        {
-            "action": "codiad.MY_PLUGIN.SOME_METHOD();",
-            "icon": "icon-info-circled",
-            "title": "This will be displayed in the rightbar"
-        }
-    ],
-    "contextmenu": [
-        {
-            "action": "codiad.MY_PLUGIN.SOME_METHOD();",
-            "icon": "icon-info-circled",
-            "applies-to": "both",
-            "title": "This will be displayed in the contextmenu"
-        }
-    ]
-}]
+{
+	"author": ["HLSiira"],
+	"name": "Atheos Plugin Template",
+	"description": "An example plugin for Atheos IDE",
+	"category": "Common",
+	"status": "available",	
+	"version": "v1.0.0",
+	"url": "https://github.com/Atheos/Plugin-Template",
+	"rightbar": [{
+		"action": "atheos.MY_PLUGIN.SOME_METHOD();",
+		"icon": "icon-info-circled",
+		"title": "This will be displayed in the rightbar"
+	}],
+	"contextmenu": [{
+		"action": "atheos.MY_PLUGIN.SOME_METHOD();",
+		"icon": "icon-info-circled",
+		"applies-to": "both",
+		"title": "This will be displayed in the contextmenu"
+	}]
+}

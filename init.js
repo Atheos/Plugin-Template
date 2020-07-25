@@ -2,23 +2,19 @@
  *  Place copyright or other info here...
  */
 
-(function(global, $){
+(function(global){
     
     // Define core
-    var codiad = global.codiad,
-        scripts= document.getElementsByTagName('script'),
-        path = scripts[scripts.length-1].src.split('?')[0],
-        curpath = path.split('/').slice(0, -1).join('/')+'/';
+    var atheos = global.atheos;
 
-    // Instantiates plugin
-    $(function() {    
-        codiad.MY_PLUGIN.init();
-    });
+    // Initiates plugin
+	amplify.subscribe('system.loadExtra', () => atheos.MY_PLUGIN.init());
 
-    codiad.MY_PLUGIN = {
+
+    atheos.MY_PLUGIN = {
         
         // Allows relative `this.path` linkage
-        path: curpath,
+        path: 'curpath',
 
         init: function() {
 
@@ -39,4 +35,4 @@
 
     };
 
-})(this, jQuery);
+})(this);
