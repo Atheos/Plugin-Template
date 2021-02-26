@@ -1,38 +1,44 @@
-/*
- *  Place copyright or other info here...
- */
+//////////////////////////////////////////////////////////////////////////////80
+// Plugin Template
+//////////////////////////////////////////////////////////////////////////////80
+// Copyright (c) Atheos & Liam Siira (Atheos.io), distributed as-is and without
+// warranty under the MIT License. See [root]/LICENSE.md for more.
+// This information must remain intact.
+//////////////////////////////////////////////////////////////////////////////80
+// Description: 
+//	A blank plugin template to provide a basic example of a typical Atheos
+//	plugin.
+//////////////////////////////////////////////////////////////////////////////80
+// Suggestions:
+//	- A small line about improvements that can be made to this plugin/file
+//////////////////////////////////////////////////////////////////////////////80
+// Usage:
+//  - desc: A short description of use
+//
+//////////////////////////////////////////////////////////////////////////////80
 
-(function(global){
-    
-    // Define core
-    var atheos = global.atheos;
+(function() {
 
-    // Initiates plugin
-	amplify.subscribe('system.loadExtra', () => atheos.MY_PLUGIN.init());
+	let self = false;
 
+	// Initiates plugin as a third priority in the system.
+	carbon.subscribe('system.loadExtra', () => atheos.template.init());
 
-    atheos.MY_PLUGIN = {
-        
-        // Allows relative `this.path` linkage
-        path: 'curpath',
+	atheos.template = {
 
-        init: function() {
+		init: function() {
+			if (self) return;
+			self = this;
 
-            // Start your plugin here...
+			// Start your plugin here...
+		},
 
-        },
+		//////////////////////////////////////////////////////////////////////80
+		// SOME_METHOD: Opens an alert message in the browser
+		//////////////////////////////////////////////////////////////////////80
+		SOME_METHOD: function() {
+			alert('Hello World');
+		}
+	};
 
-        /**
-         * 
-         * This is where the core functionality goes, any call, references,
-         * script-loads, etc...
-         * 
-         */
-         
-         SOME_METHOD: function() {
-            alert('Hello World');  
-         }
-
-    };
-
-})(this);
+})();
