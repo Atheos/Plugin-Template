@@ -3,7 +3,7 @@
 	"name": "Template",
 	"description": "An example plugin for Atheos IDE",
 	"category": "Common",
-	"status": "available",	
+	"status": "available",
 	"version": "v1.0.0",
 	"url": "https://github.com/Atheos/Plugin-Template",
 	"rightbar": [{
@@ -16,5 +16,10 @@
 		"icon": "icon-info-circled",
 		"applies-to": "both",
 		"title": "This will be displayed in the contextmenu"
+	}],
+	"config": [{
+		"file": "dialog.php",
+		"icon": "icon-info-circled",
+		"title": "This will be displayed in the sidebar of the settings dialog"
 	}]
 }
